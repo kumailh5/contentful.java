@@ -15,7 +15,7 @@ import java.util.Set;
 import static com.contentful.java.cda.rich.RichTextFactory.resolveRichTextField;
 
 final class ResourceFactory {
-  private ResourceFactory() {
+  public ResourceFactory() {
     throw new AssertionError();
   }
 
