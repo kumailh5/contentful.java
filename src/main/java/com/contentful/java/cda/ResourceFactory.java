@@ -19,7 +19,7 @@ final class ResourceFactory {
     throw new AssertionError();
   }
 
-  static final Gson GSON = createGson();
+  public static final Gson GSON = createGson();
 
   static CDAArray array(Response<CDAArray> arrayResponse, CDAClient client) {
     CDAArray array = arrayResponse.body();
