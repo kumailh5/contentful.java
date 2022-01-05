@@ -281,7 +281,7 @@ public final class ResourceUtils {
         && ((Map) value).containsKey(resource.defaultLocale);
   }
 
-  static void setRawFields(ArrayResource array) {
+  public static void setRawFields(ArrayResource array) {
     for (CDAAsset asset : array.assets().values()) {
       setRawFields(asset);
     }
