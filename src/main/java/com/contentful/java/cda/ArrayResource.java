@@ -12,9 +12,9 @@ public abstract class ArrayResource extends CDAResource {
   private static final long serialVersionUID = -2702554830040250962L;
   public List<CDAResource> items;
 
-  Map<String, CDAAsset> assets;
+  public Map<String, CDAAsset> assets;
 
-  Map<String, CDAEntry> entries;
+  public Map<String, CDAEntry> entries;
 
   /**
    * @return items in this resource.
