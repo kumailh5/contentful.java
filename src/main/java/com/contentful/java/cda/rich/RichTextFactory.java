@@ -347,7 +347,7 @@ public class RichTextFactory {
      * @param entry the entry to be completed.
      * @param field the field pointing to a link.
      */
-    private static void resolveRichLink(ArrayResource array, CDAEntry entry, CDAField field) {
+    public static void resolveRichLink(ArrayResource array, CDAEntry entry, CDAField field) {
         final Map<String, Object> rawValue = (Map<String, Object>) entry.rawFields().get(field.id());
         if (rawValue == null) {
             return;
