@@ -21,7 +21,7 @@ public final class ResourceFactory {
 
   public static final Gson GSON = createGson();
 
-  static CDAArray array(Response<CDAArray> arrayResponse, CDAClient client) {
+  public static CDAArray array(Response<CDAArray> arrayResponse, CDAClient client) {
     CDAArray array = arrayResponse.body();
     array.assets = new LinkedHashMap<>();
     array.entries = new LinkedHashMap<>();
