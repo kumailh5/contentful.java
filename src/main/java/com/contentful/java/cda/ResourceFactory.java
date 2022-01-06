@@ -35,6 +35,19 @@ public final class ResourceFactory {
     return array;
   }
 
+  public static CDAArray cdaArray(CDAArray array, CDAClient client) {
+    array.assets = new LinkedHashMap<>();
+    array.entries = new LinkedHashMap<>();
+
+    Set<CDAResource> resources = collectResources(array);
+    ResourceUtils.localizeResources(resources, client.cache);
+    ResourceUtils.mapResources(resources, array.assets, array.entries);
+    ResourceUtils.setRawFields(array);
+    resolveRichTextField(array, client);
+    ResourceUtils.resolveLinks(array, client);
+    return array;
+  }
+
   private static Set<CDAResource> collectResources(CDAArray array) {
     Set<CDAResource> resources = new LinkedHashSet<>(array.items());
     if (array.includes != null) {
