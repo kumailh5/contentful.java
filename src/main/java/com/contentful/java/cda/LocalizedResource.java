@@ -50,7 +50,7 @@ public abstract class LocalizedResource extends CDAResource {
 
   Map<String, String> fallbackLocaleMap;
 
-  Map<String, Object> fields;
+  public Map<String, Object> fields;
 
   Map<String, Object> rawFields;
 
