@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public abstract class ArrayResource extends CDAResource {
   private static final long serialVersionUID = -2702554830040250962L;
-  List<CDAResource> items;
+  public List<CDAResource> items;
 
   Map<String, CDAAsset> assets;
 
